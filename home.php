@@ -8,12 +8,8 @@
 </head>
 <body>
     <form action='signin.php' method='POST' autocomplete="off">
-        <label> id: <input type='text' name='id'/> <br/> </label>
+        <label> id: <input type='text' name='id' autofocus="autofocus"/> <br/> </label>
         <input type='submit' value='submit'/>
     </form>
-    <?php
-    require "mysql_login.php";
-    echo "hello";
-    ?>
 </body>
 </html>
