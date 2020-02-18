@@ -1,5 +1,5 @@
 <?php
-    $mysqli = new mysqli('172.27.16.208', 'jubelmakerspace', 'MakerTech138', 'makerspace_sign_in');
+    $mysqli = new mysqli('localhost', 'jubelmakerspace', 'MakerTech138', 'makerspace_sign_in');
 
     if($mysqli->connect_errno) {
 	    printf("Connection Failed: %s\n", $mysqli->connect_error);
