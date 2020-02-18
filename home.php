@@ -12,7 +12,7 @@
         <input type='submit' value='submit'/>
     </form>
     <?php
-//    require "mysql_login.php";
+    require "mysql_login.php";
     echo "hello";
     ?>
 </body>
