@@ -4,7 +4,14 @@
 session_start();
 require "mysql_login.php";
 
+$id_regex = "^S\d{5}$";
+
 $id = $_POST['id'];
+if(!preg_match($id_regex, $id, $matches)){
+    $_SESSION['error'] = true;
+    header("Location: home.php");
+    exit;
+}
 $stmt = $mysqli->prepare("insert into sign_ins (id, time) values (?, now())"); //query to insert username and password into users database
     if(!$stmt){ //error message
         $_SESSION['error'] = true;
