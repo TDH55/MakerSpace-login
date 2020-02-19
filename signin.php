@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', TRUE);
+// error_reporting(E_ALL);
+// ini_set('display_errors', TRUE);
 session_start();
 require "mysql_login.php";
 
