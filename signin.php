@@ -3,7 +3,7 @@ session_start();
 require "mysql_login.php";
 
 $id = $_POST['id'];
-$stmt = $mysqli->prepare("insert into sign_ins (id, time) values (?, now()"); //query to insert username and password into users database
+$stmt = $mysqli->prepare("insert into sign_ins (id, time) values (?, now())"); //query to insert username and password into users database
     if(!$stmt){ //error message
         echo "1";
         $_SESSION['error'] = true;

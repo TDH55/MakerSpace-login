@@ -18,6 +18,7 @@
     if($_SESSION['error']){
         echo "The last user was not signed in";
     }
+    $_SESSION['error'] = false;
     ?>
 </body>
 </html>
