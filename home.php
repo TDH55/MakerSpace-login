@@ -11,7 +11,7 @@
 </head>
 
 
-<body <?php if($_SESSION['error']) {echo('style="background:red"'); } ?>>
+<body >
     <form action='signin.php' method='POST' autocomplete="off">
         <label> id: <input type='text' name='id' autofocus="autofocus"/> <br/> </label>
         <input type='submit' value='submit'/>
