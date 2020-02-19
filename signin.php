@@ -7,17 +7,19 @@ $stmt = $mysqli->prepare("insert into makerspace_sign_in (id, time) values (?, n
     if(!$stmt){ //error message
         echo "1";
         $_SESSION['error'] = true;
-        header("Location: home.php");
+        printf("Query Prep Failed: %s\n", $mysqli->error);
+        //header("Location: home.php");
         exit;
     }
     $stmt->bind_param('s', $id); //set the insert parameters to the username and hashed pssword
     if(!$stmt->execute()){ //go to error page on failure
         $_SESSION['error'] = true;
         echo "2";
-        header("Location: home.php");
+        printf("Query Prep Failed: %s\n", $mysqli->error);
+        //header("Location: home.php");
         exit;
     }
 $stmt->close();
-header("Locaiton: home.php");
+header("Locaton: home.php");
 exit;
 ?>
