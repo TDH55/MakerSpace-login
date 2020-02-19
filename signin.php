@@ -8,7 +8,7 @@ $stmt = $mysqli->prepare("insert into sign_ins (id, time) values (?, now())"); /
         echo "1";
         $_SESSION['error'] = true;
         printf("Query Prep Failed: %s\n", $mysqli->error);
-        //header("Location: home.php");
+        header("Location: home.php");
         exit;
     }
     $stmt->bind_param('s', $id); //set the insert parameters to the username and hashed pssword
@@ -16,10 +16,11 @@ $stmt = $mysqli->prepare("insert into sign_ins (id, time) values (?, now())"); /
         $_SESSION['error'] = true;
         echo "2";
         printf("Query Prep Failed: %s\n", $mysqli->error);
-        //header("Location: home.php");
+        header("Location: home.php");
         exit;
     }
 $stmt->close();
+echo"go home";
 header("Locaton: home.php");
 exit;
 ?>
