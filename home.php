@@ -13,9 +13,10 @@
 
 <body <?php if($_SESSION['error']) {echo('style="background:red"'); } ?>>
     <form action='signin.php' method='POST' autocomplete="off">
-        <label> id: <input type='text' name='id' autofocus="autofocus"/> <br/> </label>
+        <label> id: <input type='text' name='id' autofocus="autofocus"/> <br/> </label> <br/>
         <input type='submit' value='submit'/>
     </form>
+    <br/>
     <!-- <form action='email.php' method='POST'>
         <input type='submit' value='email table'/>
     </form> -->
