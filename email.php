@@ -1,4 +1,7 @@
 <?php
+error_reporting(-1);
+ini_set('display_errors', 'On');
+set_error_handler("var_dump");
 // session_start();
 // require "mysql_login.php";
 // $to = 'jubelmakerspace@gmail.com';
@@ -55,6 +58,6 @@ $msg = "First line of text\nSecond line of text";
 $msg = wordwrap($msg,70);
 
 // send email
-mail("taylorhoward1@wustl.edu","My subject",$msg);
+mail("jubelmakerspace@gmail.com","My subject",$msg);
 
 ?>
