@@ -55,6 +55,6 @@ $msg = "First line of text\nSecond line of text";
 $msg = wordwrap($msg,70);
 
 // send email
-mail("jubelmakerspace@gmail.com","My subject",$msg);
+mail("taylorhoward1@wustl.edu","My subject",$msg);
 
 ?>
