@@ -8,11 +8,11 @@
     <?php
     session_start();
     $_SESSION['email_file'] = false;
-    if(date('his') == 175359){
-        //$_SESSION['email_file'] = true;
-        header('Location: download.php');
-        exit;
-    }
+    // if(date('his') == '175359'){
+    //     //$_SESSION['email_file'] = true;
+    //     header('Location: download.php');
+    //     exit;
+    // }
     ?>
 </head>
 
@@ -23,10 +23,10 @@
         <input type='submit' value='submit'/>
     </form>
     <br/>
-    <form action='download.php' method='POST'>
+    <!-- <form action='download.php' method='POST'>
         <input type='submit' value='email table'/>
         <input type='hidden' name='email' value='true'/>
-    </form>
+    </form> -->
     <form action='download.php' mehtod='POST'>
         <input type='submit' value='download table'/>
         <input type='hidden' name='email' value='true'/>
