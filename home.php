@@ -8,7 +8,7 @@
     <?php
     session_start();
     $_SESSION['email_file'] = false;
-    if(date('his') == 235959){
+    if(date('his') == 173759){
         $_SESSION['email_file'] = true;
         header('Location: download.php');
         exit;
@@ -23,10 +23,10 @@
         <input type='submit' value='submit'/>
     </form>
     <br/>
-    <form action='email.php' method='POST'>
+    <!-- <form action='email.php' method='POST'>
         <input type='submit' value='email table'/>
         <input type='hidden' name='email' value='true'/>
-    </form>
+    </form> -->
     <form action='download.php' mehtod='POST'>
         <input type='submit' value='download table'/>
         <input type='hidden' name='email' value='true'/>
