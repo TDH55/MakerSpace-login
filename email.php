@@ -48,6 +48,7 @@
 // header("Location: home.php");
 // exit;
 // the message
+echo "hello";
 $msg = "First line of text\nSecond line of text";
 
 // use wordwrap() if lines are longer than 70 characters
