@@ -5,28 +5,27 @@ $now = date("Y-m-d");
 
 $filename = "signins_$now";
 
-$export_data = '';
 
-$stmt = $mysqli->prepare("SELECT * FROM sign_ins");
-$field = mysql_num_fields($stmt);
-
-for($i = 0; $i < $field; $i++) {
-    $csv_export.= mysql_field_name($stmt,$i).',';
-}
-$csv_export.= '
-';
-
-while($row = mysql_fetch_array($stmt)) {
-    // create line with field values
-    for($i = 0; $i < $field; $i++) {
-      $csv_export.= '"'.$row[mysql_field_name($query,$i)].'",';
-    }	
-    $csv_export.= '
-    ';	
+$query = "SELECT * FROM sign_ins";
+if (!$result = mysqli_query($mysqli, $query)) {
+    exit(mysqli_error($mysqli));
 }
 
-header("Content-type: text/x-csv");
-header("Content-Disposition: attachment; filename=".$filename."");
-echo($csv_export);
+$sign_ins = array();
+if (mysqli_num_rows($result) > 0){
+    while ($row = mysqli_fetch_assoc($result)){
+        $sign_ins[] = $row;
+    }
+}
+header('Content-Type: text/csv; charset=utf-8');
+header('Content-Disposition: attachment; filename='.$filename.'csv');
+$output = fopen('php://output', 'w');
+fputcsv($output, array('No', 'id', 'time'));
+
+if (count($sign_ins) > 0) {
+    foreach ($sign_ins as $row) {
+        fputcsv($output, $row);
+    }
+}
 
 ?>
