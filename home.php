@@ -16,6 +16,12 @@
         <label> id: <input type='text' name='id' autofocus="autofocus"/> <br/> </label>
         <input type='submit' value='submit'/>
     </form>
+    <!-- <form action='email.php' method='POST'>
+        <input type='submit' value='email table'/>
+    </form> -->
+    <form action='download.php' mehtod='POST'>
+        <input type='submit' value='download table'/>
+    </form>
     <?php
     if($_SESSION['error']){
         echo "The last user was not signed in";
