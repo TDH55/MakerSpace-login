@@ -1,7 +1,10 @@
 <?php
 session_start();
 require "mysql_login.php";
-$now = date("Y-m-d");
+if($_POST['email']){
+    $_SESSION['email_file'] = true;
+}
+$now = date("d-m-Y");
 
 $filename = "signins_$now";
 
@@ -26,6 +29,10 @@ if (count($sign_ins) > 0) {
     foreach ($sign_ins as $row) {
         fputcsv($output, $row);
     }
+}
+if($_SESSION['email_file']){
+    header('Location: email.php');
+    exit;
 }
 
 ?>

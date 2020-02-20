@@ -7,6 +7,12 @@
     <title>Sign in</title>
     <?php
     session_start();
+    $_SESSION['email_file'] = false;
+    if(date('his') == 235959){
+        $_SESSION['email_file'] = true;
+        header('Location: download.php');
+        exit;
+    }
     ?>
 </head>
 
@@ -17,11 +23,13 @@
         <input type='submit' value='submit'/>
     </form>
     <br/>
-    <!-- <form action='email.php' method='POST'>
+    <form action='email.php' method='POST'>
         <input type='submit' value='email table'/>
-    </form> -->
+        <input type='hidden' name='email' value='true'/>
+    </form>
     <form action='download.php' mehtod='POST'>
         <input type='submit' value='download table'/>
+        <input type='hidden' name='email' value='true'/>
     </form>
     <?php
     if($_SESSION['error']){
