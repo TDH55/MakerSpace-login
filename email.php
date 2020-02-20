@@ -44,4 +44,7 @@ $returnpath = "-f" . $from;
 
 $mail = @mail($to, $subject, $message, $headers, $returnpath); 
 
+
+header("Location: home.php");
+exit;
 ?>
