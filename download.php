@@ -1,9 +1,9 @@
 <?php
 session_start();
 require "mysql_login.php";
-// `if($_POST['email']){
-//     $_SESSION['email_file'] = true;
-// }`
+if($_POST['email']){
+    $_SESSION['email_file'] = true;
+}
 $now = date("d-m-Y");
 
 $filename = "signins_$now";

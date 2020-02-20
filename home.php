@@ -23,10 +23,10 @@
         <input type='submit' value='submit'/>
     </form>
     <br/>
-    <!-- <form action='email.php' method='POST'>
+    <form action='email.php' method='POST'>
         <input type='submit' value='email table'/>
         <input type='hidden' name='email' value='true'/>
-    </form> -->
+    </form>
     <form action='download.php' mehtod='POST'>
         <input type='submit' value='download table'/>
         <input type='hidden' name='email' value='true'/>
