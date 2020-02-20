@@ -8,8 +8,8 @@
     <?php
     session_start();
     $_SESSION['email_file'] = false;
-    if(date('his') == 173759){
-        $_SESSION['email_file'] = true;
+    if(date('his') == 175359){
+        //$_SESSION['email_file'] = true;
         header('Location: download.php');
         exit;
     }
