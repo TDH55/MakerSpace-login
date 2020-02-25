@@ -66,7 +66,8 @@ msg.attach(MIMEText(body, 'plain'))
 # d = today.strftime("%d-%m-%y")
 # filename = "signins_" +str(today)+".csv"
 
-attachment = open("/home/pi/Documents/" + filename, "rb") 
+# attachment = open("/home/pi/Documents/" + filename, "rb") 
+attachment = open(filename, "rb") 
 
 # instance of MIMEBase and named as p 
 p = MIMEBase('application', 'octet-stream') 
