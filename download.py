@@ -25,7 +25,7 @@ result = cur.fetchall()
 
 c = csv.writer(open(filename, 'wb'))
 for x in result:
-    print(x)
-    # c.writerow(x)
+    # print(x)
+    c.writerow(x)
 
 
