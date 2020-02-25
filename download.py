@@ -10,7 +10,7 @@ db = MySQLdb.connect(
     database = 'makerspace_sign_ins'
 )
 today = date.today()
-d = today.strftime(%d-%m-%y)
+d = today.strftime("%d-%m-%y")
 filename = "signins_" +str(today)+".csv"
 print(filename)
 
