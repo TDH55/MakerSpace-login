@@ -6,5 +6,6 @@ db = MySQLdb.connect(
     passwd = 'MakerTech138'
 )
 
-cur = db.cursor()
+# cur = db.cursor()
+print(db)
 
