@@ -65,10 +65,10 @@ msg.attach(MIMEText(body, 'plain'))
 # open the file to be sent  
 # today = date.today()
 # d = today.strftime("%d-%m-%y")
-# filename = "signins_" +str(today)+".csv"
+filename = "signins_" +str(today)+".csv"
 
-# attachment = open("/home/pi/Documents/" + filename, "rb") 
-attachment = open(filename, "rb") 
+attachment = open("/home/pi/Documents/" + filename, "rb") 
+# attachment = open(filename, "rb") 
 
 # instance of MIMEBase and named as p 
 p = MIMEBase('application', 'octet-stream') 
@@ -79,7 +79,7 @@ p.set_payload((attachment).read())
 # encode into base64 
 encoders.encode_base64(p) 
    
-p.add_header('Content-Disposition', "attachment; filename= %s" % file) 
+p.add_header('Content-Disposition', "attachment; filename= %s" % filename) 
   
 # attach the instance 'p' to instance 'msg' 
 msg.attach(p) 
