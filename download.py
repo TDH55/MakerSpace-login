@@ -1,10 +1,10 @@
-import mysql.connector as mysql
+import MySQLdb
 
-db = mysql.connect(
+db = MySQLdb.connect(
     host = 'localhost',
     user = 'jubelmakerspace',
     passwd = 'MakerTech138'
 )
 
-print(db)
+cur = db.cursor()
 
