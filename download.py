@@ -23,7 +23,7 @@ cur = db.cursor()
 cur.execute(QUERY)
 result = cur.fetchall()
 
-c = csv.writer(open(filename, 'wb'))
+c = csv.writer(open(filename, 'w'))
 for x in result:
     # print(x)
     c.writerow(x)
