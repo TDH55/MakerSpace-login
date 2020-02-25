@@ -7,7 +7,7 @@ db = MySQLdb.connect(
     host = 'localhost',
     user = 'jubelmakerspace',
     passwd = 'MakerTech138',
-    database = 'makerspace_sign_ins'
+    database = 'makerspace_sign_in'
 )
 today = date.today()
 d = today.strftime("%d-%m-%y")
