@@ -12,13 +12,13 @@ db = MySQLdb.connect(
 today = date.today()
 d = today.strftime("%d-%m-%y")
 filename = "/home/pi/Documents/signins_" +str(today)+".csv"
-print(filename)
+# print(filename)
 
 
 QUERY='SELECT * FROM sign_ins;'
 
 
-print(db)
+# print(db)
 cur = db.cursor()
 cur.execute(QUERY)
 result = cur.fetchall()
