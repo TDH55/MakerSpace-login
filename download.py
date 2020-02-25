@@ -4,8 +4,13 @@ db = MySQLdb.connect(
     host = 'localhost',
     user = 'jubelmakerspace',
     passwd = 'MakerTech138'
+    db = 'makerspace_sign_ins'
+    table = 'sign_ins'
 )
 
-# cur = db.cursor()
 print(db)
+cur = db.cursor()
+
+
+
 
