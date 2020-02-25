@@ -20,7 +20,7 @@ db = MySQLdb.connect(
 )
 today = date.today()
 d = today.strftime("%d-%m-%y")
-filename = "/var/www/html/signins_" +str(today)+".csv"
+filename = "/home/pi/Documents/signins_" +str(today)+".csv"
 file = "signins_" +str(today)+".csv"
 # print(filename)
 
@@ -68,7 +68,7 @@ msg.attach(MIMEText(body, 'plain'))
 # filename = "signins_" +str(today)+".csv"
 
 # attachment = open("/home/pi/Documents/" + filename, "rb") 
-attachment = open(file, "rb") 
+attachment = open(filename, "rb") 
 
 # instance of MIMEBase and named as p 
 p = MIMEBase('application', 'octet-stream') 
