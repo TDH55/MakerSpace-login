@@ -33,10 +33,17 @@ cur = db.cursor()
 cur.execute(QUERY)
 result = cur.fetchall()
 
-c = csv.writer(open(filename, 'w'))
+# c = csv.writer(open(filename, 'w'))
+# for x in result:
+#     # print(x)
+#     c.writerow(x)
+# c.close()
+f = open(filename, 'w')
+c = csv.writer(f)
 for x in result:
-    # print(x)
     c.writerow(x)
+
+f.close()
 #email code
 
 fromaddr = "jubelmakerspace@gmail.com"
@@ -63,12 +70,10 @@ body = ""
 msg.attach(MIMEText(body, 'plain')) 
 
 # open the file to be sent  
-# today = date.today()
-# d = today.strftime("%d-%m-%y")
+today = date.today()
+d = today.strftime("%d-%m-%y")
 filename = "signins_" +str(today)+".csv"
-
-attachment = open("/home/pi/Documents/" + filename, "rb") 
-# attachment = open(filename, "rb") 
+attachment = open("/home/pi/Documents/", "rb") 
 
 # instance of MIMEBase and named as p 
 p = MIMEBase('application', 'octet-stream') 
